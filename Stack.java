@@ -44,7 +44,35 @@ public class Stack {
             head = newNode;
         }
     }
+    /**
+     *  Removes a value from list
+     *  
+     */
+    public void pop(){
+        if(isEmpty()){
+            return ;
+        }
+        else{
+        String value = head.value;
+        head = head.next;
+        System.out.println(value);
+        }
+    }
 
+    /**
+     * look at the head of the list and return its value
+     */
+    public void peek(){
+        if(!isEmpty()){
+            String value = head.value;
+            System.out.println(value); 
+        }
+        else{
+          isEmpty();
+        }
+    }
+
+    
    /**
      * Print the queue
      */
