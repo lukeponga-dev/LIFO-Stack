@@ -13,6 +13,7 @@ public class Main {
            stack.peek();
 
             stack.print();
+            System.out.println("Empty: " + stack.isEmpty());
 
 
         }

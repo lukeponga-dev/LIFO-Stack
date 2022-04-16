@@ -1,9 +1,9 @@
 
 public class Stack {
-   
+
     // Class Variables
     private Node head;
-    
+
     /**
      * Constructor
      */
@@ -20,7 +20,7 @@ public class Stack {
         return false;
     }
 
-      /**
+    /**
      * Get the length of the queue
      */
     public int getLength() {
@@ -44,36 +44,33 @@ public class Stack {
             head = newNode;
         }
     }
+
     /**
-     *  Removes a value from list
-     *  
+     * Removes the node from front of list
      */
-    public void pop(){
-        if(isEmpty()){
-            return ;
-        }
-        else{
-        String value = head.value;
-        head = head.next;
-        System.out.println(value);
+    public void pop() {
+        if (!isEmpty()) {
+            String value = head.value;
+            head = head.next;
+            System.out.println(value);
+        } else {
+            isEmpty();
         }
     }
 
     /**
      * look at the head of the list and return its value
      */
-    public void peek(){
-        if(!isEmpty()){
+    public void peek() {
+        if (!isEmpty()) {
             String value = head.value;
-            System.out.println(value); 
-        }
-        else{
-          isEmpty();
+            System.out.println(value);
+        } else {
+            isEmpty();
         }
     }
 
-    
-   /**
+    /**
      * Print the queue
      */
     public void print() {
