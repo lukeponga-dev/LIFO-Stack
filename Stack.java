@@ -52,7 +52,7 @@ public class Stack {
         if (!isEmpty()) {
             String value = head.value;
             head = head.next;
-            System.out.println(value);
+            System.out.println("Pop Head: " + value);
         } else {
             isEmpty();
         }
@@ -64,7 +64,7 @@ public class Stack {
     public void peek() {
         if (!isEmpty()) {
             String value = head.value;
-            System.out.println(value);
+            System.out.println("Peek Head: " + value);
         } else {
             isEmpty();
         }
@@ -76,7 +76,7 @@ public class Stack {
     public void print() {
         Node current = head;
         while (current != null) {
-            System.out.print(current.value + " -> ");
+            System.out.print("\n " + current.value );
             current = current.next;
         }
         System.out.println();
