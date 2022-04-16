@@ -3,7 +3,10 @@ public class Stack {
    
     // Class Variables
     private Node head;
-
+    
+    /**
+     * Constructor
+     */
     public Stack() {
         head = null;
     }
@@ -15,6 +18,19 @@ public class Stack {
             return true;
         }
         return false;
+    }
+
+      /**
+     * Get the length of the queue
+     */
+    public int getLength() {
+        int counter = 0;
+        Node current = head;
+        while (current != null) {
+            counter++;
+            current = current.next;
+        }
+        return counter;
     }
 
     /* Adds new node to the front of the list */
@@ -29,10 +45,13 @@ public class Stack {
         }
     }
 
+   /**
+     * Print the queue
+     */
     public void print() {
         Node current = head;
         while (current != null) {
-            System.out.print(current.value + "-> ");
+            System.out.print(current.value + " -> ");
             current = current.next;
         }
         System.out.println();

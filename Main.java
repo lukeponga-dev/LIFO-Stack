@@ -4,13 +4,9 @@ public class Main {
 
             stack.push("H");
             stack.push("E");  
-                      stack.push("L");
+            stack.push("L");
             stack.push("L");
             stack.push("O");
-
-
-
-
             stack.print();
 
 
