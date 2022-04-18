@@ -1,4 +1,3 @@
-
 public class Stack {
 
     // Class Variables
@@ -10,30 +9,13 @@ public class Stack {
     public Stack() {
         head = null;
     }
-
+    
+    
     // Public Methods
-    /* checks if stack is empty */
-    public boolean isEmpty() {
-        if (head == null) {
-            return true;
-        }
-        return false;
-    }
 
     /**
-     * Get the length of the queue
+     * Adds new node to the front of the list
      */
-    public int getLength() {
-        int counter = 0;
-        Node current = head;
-        while (current != null) {
-            counter++;
-            current = current.next;
-        }
-        return counter;
-    }
-
-    /* Adds new node to the front of the list */
     public void push(String x) {
         Node newNode = new Node(x);
 
@@ -70,10 +52,34 @@ public class Stack {
         }
     }
 
+
+    /** 
+     *  checks if stack is empty 
+    */
+    public boolean isEmpty() {
+        if (head == null) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Get the length of the queue
+     */
+    public int length() {
+        int counter = 0;
+        Node current = head;
+        while (current != null) {
+            counter++;
+            current = current.next;
+        }
+        return counter;
+    }
+
     /**
      * Print the queue
      */
-    public void print() {
+    public void dump() {
         Node current = head;
         while (current != null) {
             System.out.print("\n " + current.value );
