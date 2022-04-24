@@ -1,6 +1,7 @@
 public class Main {
         public static void main(String[] args){
             Stack stack = new Stack();
+<<<<<<< HEAD
 
             stack.push("One");
             stack.push("Two");
@@ -25,6 +26,9 @@ public class Main {
             // stack.print();
             // System.out.println("Empty: " + stack.isEmpty());
 
+=======
+       
+>>>>>>> 9cfa271089105fd68ebd69f1e9e63e34bd625eb9
 
         }
 }

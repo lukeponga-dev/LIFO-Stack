@@ -36,6 +36,7 @@ public class Stack {
       head = (head).next;
 
     }
+<<<<<<< HEAD
 
     // if (!isEmpty()) {
     // String value = head.value;
@@ -65,6 +66,24 @@ public class Stack {
     while (current != null) {
       counter++;
       current = current.next;
+=======
+    
+    
+    // Public Methods
+
+    /**
+     * Adds new node to the front of the list
+     */
+    public void push(String x) {
+        Node newNode = new Node(x);
+
+        if (isEmpty()) {
+            head = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+>>>>>>> 9cfa271089105fd68ebd69f1e9e63e34bd625eb9
     }
     return counter;
   }
@@ -103,3 +122,42 @@ public void dump(){
 }
 }
 
+<<<<<<< HEAD
+=======
+
+    /** 
+     *  checks if stack is empty 
+    */
+    public boolean isEmpty() {
+        if (head == null) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Get the length of the queue
+     */
+    public int length() {
+        int counter = 0;
+        Node current = head;
+        while (current != null) {
+            counter++;
+            current = current.next;
+        }
+        return counter;
+    }
+
+    /**
+     * Print the queue
+     */
+    public void dump() {
+        Node current = head;
+        while (current != null) {
+            System.out.print("\n " + current.value );
+            current = current.next;
+        }
+        System.out.println();
+    }
+}
+>>>>>>> 9cfa271089105fd68ebd69f1e9e63e34bd625eb9
